@@ -1,6 +1,6 @@
-# Web Scraper: Data Extractor
+## Web Scraper: Data Extractor
 
-This Python-based web scraper uses `requests` and `BeautifulSoup` to extract structured data from a paginated website and export it into a CSV file. It is designed to be simple and reusable.
+This Python-based web scraper uses `requests` and `BeautifulSoup` to extract structured data from a paginated website and export it into a CSV file.
 The data extracted is from https://www.python.org/jobs/. The scraper filters for "Machine learning" jobs.
 ---
 

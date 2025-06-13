@@ -50,13 +50,13 @@ def extract_jobs_info_from_html_elements(all_machine_learning_info_li_elements):
 def get_machine_learning_jobs():
     for page_number in range(1, NUM_PAGES + 1):
         response = get_response_from_url(page_number)
-        
+
         all_machine_learning_info_li_elements = get_all_machine_learning_job_html_elements(response)
         extract_jobs_info_from_html_elements(all_machine_learning_info_li_elements)
 
         time.sleep(2)  # Sleep to not hit the website too hard
 
-def save_to_csv(jobs, filename="machine_learning_jobs.csv"):
+def save_to_csv(jobs, filename="extracted_jobs.csv"):
     with open(filename, mode="w", encoding="utf-8") as csv_file:
         fieldnames = ["job_title", "link_url", "company_name", "location", "looking_for", "date_posted", "category"]
         writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
